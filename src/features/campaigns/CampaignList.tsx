@@ -31,8 +31,8 @@ export default function CampaignList() {
   const [statusFilter, setStatusFilter] =
     useState<CampaignStatus | "all">("all");
 
-  const [sortField, setSortField] = useState<SortField>(null);
-  const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
+  const [sortField] = useState<SortField>(null);
+const [sortOrder] = useState<SortOrder>("asc");
 
   // Load campaigns + restore UI state
   useEffect(() => {
@@ -101,8 +101,7 @@ export default function CampaignList() {
     );
   };
 
-  const updateStatus = (status: CampaignStatus) => {
-    const updated = campaigns.map((c) =>
+const updateStatus = (status: CampaignStatus) => {    const updated = campaigns.map((c) =>
       selected.includes(c.id) ? { ...c, status } : c
     );
 
