@@ -1,4 +1,4 @@
-import type { Campaign } from "../../../shared/types/campaign.ts";
+import type { Campaign } from "../../shared/types/campaign";
 
 export const mockCampaigns: Campaign[] = [
   {
