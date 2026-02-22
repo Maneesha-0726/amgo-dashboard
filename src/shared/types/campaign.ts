@@ -11,4 +11,5 @@ export type Campaign = {
   budget: number;
   impressions: number;
   clicks: number;
+  createdAt: string;   // ✅ ADD THIS
 };

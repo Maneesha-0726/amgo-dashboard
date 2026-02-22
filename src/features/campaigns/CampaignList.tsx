@@ -101,16 +101,16 @@ const [sortOrder] = useState<SortOrder>("asc");
     );
   };
 
-const updateStatus = (status: CampaignStatus) => {    const updated = campaigns.map((c) =>
-      selected.includes(c.id) ? { ...c, status } : c
-    );
+// const updateStatus = (status: CampaignStatus) => {    const updated = campaigns.map((c) =>
+//       selected.includes(c.id) ? { ...c, status } : c
+//     );
 
-    setCampaigns(updated);
-    localStorage.setItem("campaigns", JSON.stringify(updated));
+//     setCampaigns(updated);
+//     localStorage.setItem("campaigns", JSON.stringify(updated));
 
-    setSelected([]);
-    setToast(`Updated ${selected.length} campaign(s)`);
-  };
+//     setSelected([]);
+//     setToast(`Updated ${selected.length} campaign(s)`);
+//   };
 
   const handleDelete = () => {
     if (!deleteId) return;
