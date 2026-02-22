@@ -16,13 +16,14 @@ export default function AddCampaign() {
       JSON.parse(localStorage.getItem("campaigns") || "[]");
 
     const newCampaign: Campaign = {
-      id: Date.now().toString(),
-      name: form.name,
-      budget: Number(form.budget),
-      status: form.status as any,
-      impressions: Math.floor(Math.random() * 50000) + 5000,
-clicks: Math.floor(Math.random() * 5000) + 500,
-    };
+  id: Date.now().toString(),
+  name: form.name,
+  budget: Number(form.budget),
+  status: form.status as any,
+  impressions: Math.floor(Math.random() * 50000) + 5000,
+  clicks: Math.floor(Math.random() * 5000) + 500,
+  createdAt: new Date().toISOString(),  
+};
 
     localStorage.setItem(
       "campaigns",
